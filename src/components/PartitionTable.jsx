@@ -1,7 +1,7 @@
 import React from 'react';
 import TableRow from './TableRow';
 
-const PartitionTable = ({ tableData }) => (
+const PartitionTable = ({ tableData, onInputChange }) => (
   <div>
     {tableData.map((table, gridIndex) => (
       <table border="1" key={gridIndex}>
@@ -24,13 +24,18 @@ const PartitionTable = ({ tableData }) => (
             </tr>
           ))}
         </thead>
-        <TableRow rowList={table.rowList} />
+        <tbody>
+          {table.rowList.map((row, rowIndex) => (
+            <TableRow key={row.id || rowIndex} row={row} rowIndex={rowIndex} onInputChange={onInputChange} />
+          ))}
+        </tbody>
       </table>
     ))}
   </div>
 );
 
 export default PartitionTable;
+
 
 
 

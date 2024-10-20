@@ -1,7 +1,11 @@
 
 .table-container {
-    margin: 20px;
-}
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 10px 10px 10px;
+  }
 
 
 table {
@@ -41,6 +45,20 @@ input[type="text"] {
     color: gray;
     box-sizing: border-box;
 }
+.buttonSubmit {
+    padding: 10px 20px;
+    background-color: #ddd; 
+    color: gray;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Arial', sans-serif;
+    cursor: pointer;
+  }
+  
+
+  .buttonSubmit:hover {
+    background-color: #e8e8e8;
+  }
 
 
 
